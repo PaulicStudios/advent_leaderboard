@@ -43,7 +43,7 @@ Rails.application.configure do
     },
     update_leaderboard: {
       # Run every 20 minutes during the event
-      cron: "*/20 * 1-25 DEC * America/New_York",
+      cron: "*/15 * 1-25 DEC * America/New_York",
       class: "UpdateLeaderboardJob",
       args: -> { [Time.now.year] },
       description: "Update the leaderboard with the latest from Advent of Code"
